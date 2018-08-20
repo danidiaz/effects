@@ -226,6 +226,10 @@ apply q' x =
 -- * Sending and Running Effects
 
 -- | Send an effect and wait for a reply.
+--
+-- musing of mine: so here the eff, which I guess is a GADT like the "Teletype" of
+-- the examples, is parameterized with the whole effect Eff (whose
+-- parameter e includes eff itself!) and the return type.
 send :: (Member eff e, Effectful m) => eff (Eff e) b -> m e b
 send t = raiseEff (E (inj t) (tsingleton (Arrow Return)))
 
