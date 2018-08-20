@@ -1,0 +1,14 @@
+name:                effects-playground
+version:             0.0.0.0
+synopsis:            Publish a REPL as a REST service
+license:             MIT
+category:            Control
+build-type:          Simple
+cabal-version:       2
+
+executable effects-playground
+   main-is: Main.hs 
+   default-language:    Haskell2010
+   build-depends:
+        base            >= 4.10 && < 5,
+        effects         == 0.3.2.0
