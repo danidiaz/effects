@@ -60,6 +60,8 @@ prj = prj' (getOffset (offset :: Offset e r))
 
 
 decompose :: Union (t ': r) f v -> Either (Union r f v) (t f v)
+-- musing of mine: I guess it is not possible to have a 0 with a non-empty
+-- list of types (?)
 decompose (Union 0 v) = Right $ unsafeCoerce v
 decompose (Union n v) = Left  $ Union (n-1) v
 {-# INLINE [2] decompose #-}
