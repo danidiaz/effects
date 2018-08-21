@@ -36,7 +36,7 @@ from the [paper](http://okmij.org/ftp/Haskell/extensible/more.pdf):
     reply, to be fed into the continuation. Different requests have their
     own reply types, hence x is existentially quantified"
 
-
+The Union type in the library has more type parameters than the Union type from the paper. 
 
 
 
