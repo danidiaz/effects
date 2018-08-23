@@ -29,14 +29,19 @@
                   -> Request effect m a
                   -> Request effect n (c a)
 
-
-from the [paper](http://okmij.org/ftp/Haskell/extensible/more.pdf):
+From the [paper](http://okmij.org/ftp/Haskell/extensible/more.pdf):
 
     "The remaining part of the request signature f x tells the type x of the
     reply, to be fed into the continuation. Different requests have their
     own reply types, hence x is existentially quantified"
 
-The Union type in the library has more type parameters than the Union type from the paper. 
+The Union type in the library has more type parameters than the Union type from the paper...
 
+Higher-order effects:
+
+- Reader's "local"
+- Exception's "catch"
+- Fresh's "reset"
+- any others?
 
 
