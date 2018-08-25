@@ -45,3 +45,17 @@ Higher-order effects:
 - any others?
 
 
+from the [freer-simple](http://hackage.haskell.org/package/freer-simple-1.1.0.0/docs/Control-Monad-Freer.html) docs:
+
+	As mentioned in the documentation for Eff, it’s rare to actually specify a
+	concrete list of effects for an Eff computation, since that has two significant
+	downsides:
+
+	It couples the computation to that specific list of effects, so it cannot be
+	used in functions that perform a strict superset of effects.  It forces the
+	effects to be handled in a particular order, which can make handler code
+	brittle when the list of effects is changed.  Fortunately, these restrictions
+	are easily avoided by using effect constraints, such as Member or Members,
+	which decouple a computation from a particular concrete list of effects.
+
+
